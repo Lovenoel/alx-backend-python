@@ -5,11 +5,11 @@ Safely get value function with type annotations.
 
 from typing import Mapping, Any, TypeVar, Union
 
-T = TypeVar('T')
+T = TypeVar('T') # Generic type variable
 
 
 def safely_get_value(
-        dct: Mapping[Any, T], key: Any,
+        dct: Mapping, key: Any,
         default: Union[T, None] = None) -> Union[T, None]:
     """
     Safely get a value from a dictionary. If the key doesn't exist,
