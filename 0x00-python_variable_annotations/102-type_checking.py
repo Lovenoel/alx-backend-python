@@ -7,7 +7,7 @@ from typing import List, Tuple
 
 
 # Modify lst to be a general Tuple
-def zoom_array(lst: Tuple, factor: int = 2) -> List[int]:
+def zoom_array(lst: Tuple, factor: int = 2) -> List:
     """
     Repeats each element in the input tuple according to the zoom
     factor.
