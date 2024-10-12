@@ -6,7 +6,8 @@ Zoom array function with type annotations.
 from typing import List, Tuple
 
 
-def zoom_array(lst: Tuple[int, ...], factor: int = 2) -> List[int]:
+# Modify lst to be a general Tuple
+def zoom_array(lst: Tuple, factor: int = 2) -> List[int]:
     """
     Repeats each element in the input tuple according to the zoom
     factor.
@@ -17,7 +18,7 @@ def zoom_array(lst: Tuple[int, ...], factor: int = 2) -> List[int]:
     :return: a list of integers with each element repeated 'factor'
     times
     """
-    zoomed_in: List[int] = [
+    zoomed_in: List = [
         item for item in lst
         for i in range(factor)
     ]
