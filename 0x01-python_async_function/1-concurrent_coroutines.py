@@ -21,7 +21,8 @@ async def wait_n(n: int, max_delay: int) -> List[float]:
     sorted_delays = []
     while tasks:
         # Wait for at least one of the tasks to complete
-        done, tasks = await asyncio.wait(tasks, return_when=asyncio.FIRST_COMPLETED)
+        done, tasks = await asyncio.wait(
+                tasks, return_when=asyncio.FIRST_COMPLETED)
 
         # Gather the results of the completed tasks
         for task in done:
